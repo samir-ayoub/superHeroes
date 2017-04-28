@@ -14,12 +14,29 @@
 		<section class="container">
 			
 			<div class="lista-herois">			
-				<div class="conteudo">
-					<h1></h1>
-					<h2></h2>
+				<div class="jumbotron">
+					<h1><%= herois.squadName %></h1>
+					<h2><%= "Home-Town: " + herois.homeTown + " | Formed: " + herois.formed %></h2>
 				</div>
 				<div class=lista-herois>
-					<ul></ul>
+					<div class="row">
+
+   						<% for(var i=0; i<herois.members.length; i++) {%> 
+						   <div class="col-md-4 col-sm-4">
+						   		<h3><%= herois.members[i].name %></h3>
+						   		<p>Idade: <%= herois.members[i].age %></p>
+						   		<p>Identidade secreta: <%= herois.members[i].secretIdentity %></p>
+						   		<p>Superpoderes:</p>
+						   		<ul>
+									<% for(var j=0; j<herois.members[i].powers.length; j++) {%> 
+									   <li class="superpoderes"><%= herois.members[i].powers[j] %></li>
+									<% } %>									   				
+						   		</ul>
+						   		
+					   		</div>
+						<% } %>
+
+					</div>
 				</div>
 			</div>
 

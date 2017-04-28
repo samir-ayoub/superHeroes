@@ -16,6 +16,20 @@
 
 }
 
-.conteudo {
-	padding-top: 100px;
+.lista-herois {
+}
+
+.lista-herois {
+	width: 100%;
+}
+
+.lista-herois ul li {
+	vertical-align:top;
+
+	list-style: none;
+}
+
+.lista-herois .superpoderes {
+	display: block;
+	list-style: 
 }
